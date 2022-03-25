@@ -9,11 +9,13 @@ use Illuminate\Support\Facades\Hash;
 
 class RegisterController extends Controller
 {
-    public function index() {
+    public function index()
+    {
         return view('auth.register');
     }
 
-    public function store(Request $request) {
+    public function store(Request $request)
+    {
         $this->validate($request,[
             'name' => 'required|max:255',
             'username' => 'required|max:255',
