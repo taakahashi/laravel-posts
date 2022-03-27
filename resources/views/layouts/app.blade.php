@@ -13,7 +13,7 @@
     <nav class="p-6 bg-white flex justify-between mb-6">
         <ul class="flex items-center">
             <li>
-                <a href="" class="p-3">Home</a>
+                <a href="{{ route('home') }}" class="p-3">Home</a>
             </li>
             <li>
                 <a href="{{ route('dashboard') }}" class="p-3">Dashboard</a>
@@ -25,7 +25,7 @@
         <ul class="flex items-center">
             @auth
                 <li>
-                    <a href="" class="p-3 font-bold">{{ auth()->user()->name }}</a>
+                    <label class="p-3 font-bold">{{ auth()->user()->name }}</label>
                 </li>
                 <li>
                     <form action="{{ route('logout') }}" method="post" class="p-3 inline">

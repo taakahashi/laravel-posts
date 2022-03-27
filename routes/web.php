@@ -16,6 +16,5 @@ Route::post('/logout', [\App\Http\Controllers\Auth\LogoutController::class, 'sto
 Route::get('/register', [\App\Http\Controllers\Auth\RegisterController::class, 'index'])->name('register');
 Route::post('/register', [\App\Http\Controllers\Auth\RegisterController::class, 'store']);
 
-Route::get('/posts', function () {
-    return view('posts.index');
-})->name('posts');
+Route::get('/posts', [\App\Http\Controllers\PostController::class, 'index'])->name('posts');
+Route::post('/posts', [\App\Http\Controllers\PostController::class, 'store']);
